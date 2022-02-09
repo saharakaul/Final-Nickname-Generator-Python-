@@ -9,7 +9,7 @@ First_Name = input("Please Enter your first name ")
 Last_Name = input("Please Enter your last name ")
 
 #Nickname list
-nickname_list = [First_Name + " Cool " + Last_Name, First_Name + " Nerd " + Last_Name, First_Name + " Swag " + Last_Name ]
+nickname_list = ["Cool", "Swag", "Nerd"]
 
 #Main program loop
 loop = True
@@ -33,23 +33,20 @@ while loop:
         First_Name = input("Please Enter your first name ")
         # Ask User for Last Name
         Last_Name = input("Please Enter your last name ")
-        #Insert the new name into the nickname list
-        nickname_list = [First_Name + " Cool " + Last_Name, First_Name + " Nerd " + Last_Name,
-                         First_Name + " Swag " + Last_Name]
 
     #Print random nickname
     elif Number == 2:
         #Generate a random integer that falls within the legnth of the list
-        x = random.randint(0, len(nickname_list))
+        x = random.randint(0, len(nickname_list)-1)
         #Print random nickname
-        print(nickname_list[x])
+        print(First_Name + " " + Last_Name + " " + nickname_list[x])
 
     #Print all nicknames
     elif Number == 3:
         #Loop until it has printed all list elements
         for element in nickname_list:
             #Print elements
-            print(element)
+            print(First_Name + " " + Last_Name + " " + element)
     #Add New Nickname
     elif Number == 4:
         #Allow user to input new nickname
